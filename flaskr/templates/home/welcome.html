@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Loan Type{% endblock %}</h1>
+{% endblock %}
+
+{% for loan in loans %}
+    <p>Loan Type: {{ loan.loan_type }}</p>
+    <p>Amount: {{ loan.amount }}</p>
+    <p>Interest: {{ loan.interest }}</p>
+    <p>Repay: {{ loan.repay }}</p>
+    <p>Loan Period: {{ loan.loan_period }}</p>
+    <hr>
+{% endfor %}
