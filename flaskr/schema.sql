@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS loans;
 
 CREATE TABLE user (
   id VARCHAR(255) PRIMARY KEY NOT NULL,
-  phone VARCHAR(11) UNIQUE NOT NULL,
+  phone VARCHAR(255) UNIQUE NOT NULL,
   username TEXT NOT NULL,
   password TEXT NOT NULL
 );
@@ -17,7 +17,7 @@ CREATE TABLE credit(
 
 CREATE TABLE who_borrow(
   borrow_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  id VARCHAR(18) NOT NULL REFERENCES user(id),
+  id VARCHAR(255) NOT NULL REFERENCES user(id),
   loan_id INTEGER NOT NULL REFERENCES loans(loan_id),
   loan_date date NOT NULL
 );

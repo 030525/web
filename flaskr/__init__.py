@@ -27,6 +27,9 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
+    from . import my
+    app.register_blueprint(my.bp)
+
     from . import home
     app.register_blueprint(home.bp)
 
@@ -35,7 +38,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return redirect(url_for('auth.login'))
+        return redirect(url_for('auth.firstpage'))
 
     return app
 

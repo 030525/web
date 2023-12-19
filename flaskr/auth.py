@@ -10,6 +10,15 @@ from flaskr.db import get_db
 # 名字和下列路由的前缀
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
+
+@bp.route('/firstpage',methods=(['GET']))
+def firstpage():
+    if g.user is None:
+        return redirect(url_for('auth.login'))
+    else:
+        return redirect(url_for('home.welcome'))
+
+
 # get和post触发
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
@@ -91,6 +100,7 @@ def load_logged_in_user():
         g.user = get_db().execute(
             'SELECT * FROM user WHERE id = ?', (user_id,)
         ).fetchone()
+
 
 @bp.route('/logout')
 def logout():
