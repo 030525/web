@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Loan Type{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    {% for loan in loans %}
+        <div>
+            <form method="post" onsubmit="return confirmSubmission()">
+                <input type="hidden" name="loan_id" value="{{ loan['loan_id'] }}">
+
+                <p>贷款类型: {{ loan['loan_type'] }}</p>
+                <p>金额: {{ loan['amount'] }}</p>
+                <p>利率: {{ loan['interest'] }}</p>
+                <p>偿还方式: {{ loan['repay'] }}</p>
+                <p>还款时长: {{ loan['loan_period'] }}</p>
+                <button type="submit">申请</button>
+            </form>
+            <hr>
+        </div>
+    {% endfor %}
+{% endblock %}
