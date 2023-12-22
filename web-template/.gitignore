@@ -1,0 +1,5 @@
+instance/**
+flaskr/__pycache__/**
+ssh.sh
+image/**
+pj/**
