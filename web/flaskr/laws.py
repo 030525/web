@@ -18,10 +18,20 @@ def submit(loan_id):
 
         db=get_db()
         db.execute(
-            "INSERT INTO who_borrow (id, loan_id, loan_date) VALUES (?,?,?)",
+            "INSERT INTO borrow (id, loan_id, loan_date) VALUES (?,?,?)",
             (user_id, int(loan_id),current_datetime ),
         )
         db.commit()
+
+        borrow_id = db.execute(
+            "SELECT borrow_id FROM borrow WHERE id=? AND loan_id=? AND loan_date=?",
+            (user_id, int(loan_id), current_datetime)
+        ).fetchone()
+
+        borrow_id = int(borrow_id['borrow_id'])
+        db.execute("INSERT INTO unpaid (borrow_id) VALUES (?)", (borrow_id,))
+        db.commit()
+
         return redirect(url_for('home.welcome'))
 
     return  render_template('laws/submit.html')

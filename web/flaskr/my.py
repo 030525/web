@@ -13,7 +13,7 @@ bp = Blueprint('my', __name__, url_prefix='/my')
 def main():
     id = session.get('user_id')
     borrow_fetch = get_db().execute(
-            'SELECT strftime("%Y-%m-%d-%H-%M", loan_date) as loan_date,loan_id FROM who_borrow WHERE id = ?', (id,)
+            'SELECT strftime("%Y/%m/%d-%H:%M", loan_date) as loan_date,loan_id FROM borrow WHERE id = ?', (id,)
         ).fetchall()
 
     borrow = [dict(row) for row in borrow_fetch]
@@ -31,6 +31,6 @@ def main():
         ret['loan_date'] = pair['loan_date']
 
         result.append(ret)
-
+        print(result)
     return  render_template('my/main.html',loans=result)
 

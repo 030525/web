@@ -6,7 +6,7 @@
 
 {% block content %}
     {% for loan in loans %}
-        <p>贷款日期：{{loan['date']}}</p>
+        <p>贷款日期：{{loan['loan_date']}}</p>
         <p>贷款类型: {{ loan['loan_type'] }}</p>
         <p>金额: {{ loan['amount'] }}</p>
         <p>利率: {{ loan['interest'] }}</p>

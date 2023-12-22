@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS credit;
-DROP TABLE IF EXISTS who_borrow;
+DROP TABLE IF EXISTS borrow;
 DROP TABLE IF EXISTS loans;
 
 CREATE TABLE user (
@@ -15,12 +15,17 @@ CREATE TABLE credit(
   rank TEXT NOT NULL
 );
 
-CREATE TABLE who_borrow(
+CREATE TABLE borrow(
   borrow_id INTEGER PRIMARY KEY AUTOINCREMENT,
   id VARCHAR(255) NOT NULL REFERENCES user(id),
   loan_id INTEGER NOT NULL REFERENCES loans(loan_id),
   loan_date date NOT NULL
 );
+
+CREATE TABLE unpaid(
+  borrow_id INTEGER PRIMARY KEY REFERENCES borrow(borrow_id)
+);
+
 
 CREATE TABLE loans(
   loan_id INTEGER PRIMARY KEY NOT NULL,
