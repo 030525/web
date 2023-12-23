@@ -45,7 +45,7 @@
         </div>
         <div class="col-md-6">
           <div class="follow-us">
-            <a href="#" class="btn btn-xs">立即申请</a> </div>
+            <a href="{{ url_for('auth.index') }}#apply" class="btn btn-xs">立即申请</a> </div>
         </div>
       </div>
     </div>
@@ -79,21 +79,21 @@
       <div class="container">
         <div class="intro-text z-index text-center">
           <h1>提供灵活与便捷</h1>
-          <a href="#" class="btn">申请贷款</a> </div>
+          <a href="#apply" class="btn">申请贷款</a> </div>
       </div>
     </div>
     <div class="item dark-overlay" style="background-image:url(../static/images/intro-img2.jpg)">
       <div class="container">
         <div class="intro-text z-index text-center">
           <h1>最实惠的利率</h1>
-          <a href="#" class="btn">申请贷款</a> </div>
+          <a href="#apply" class="btn">申请贷款</a> </div>
       </div>
     </div>
     <div class="item dark-overlay" style="background-image:url(../static/images/intro-img3.jpg)">
       <div class="container">
         <div class="intro-text z-index text-center">
           <h1>全面的贷款类型</h1>
-          <a href="#" class="btn">申请贷款</a> </div>
+          <a href="#apply" class="btn">申请贷款</a> </div>
       </div>
     </div>
   </div>
@@ -145,24 +145,7 @@
 </section>
 <!-- /Interest-rates --> 
 
-<!-- About-us -->
-<section id="about-us" class="section-padding">
-  <div class="container">
-    <div class="section-header text-center">
-      <div class="section-title">帮助</div>
-      <h2>获取专业的金融帮助</h2>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 order-12">
-        <div class="image-box"> <img src="../static/images/700x510.jpg" alt="image"> </div>
-      </div>
-      <div class="col-lg-6">
-        <p>我们的金融团队成员来自世界名校，我们拥有强大的资金储备，以及最先进的金融工具，我们的业务覆盖全球70多个国家</p>
-        <a href="#" class="btn">咨询业务</a> </div>
-    </div>
-  </div>
-</section>
-<!-- /About-us --> 
+
 
 <!-- Our-Services -->
 <section id="services" class="section-padding gray-bg">
@@ -176,23 +159,23 @@
         <div class="item text-center">
           <div class="service-icon"> <img src="../static/images/home-loan.png" alt="image"> </div>
           <h5>购房贷款</h5>
-          <a href="#" class="btn btn-sm">咨询更多</a> </div>
+          </div>
         <div class="item text-center">
           <div class="service-icon"> <img src="../static/images/business-loan.png" alt="image"> </div>
           <h5>商业贷款</h5>
-          <a href="#" class="btn btn-sm">咨询更多</a> </div>
+          </div>
         <div class="item text-center">
           <div class="service-icon"> <img src="../static/images/car-loan.png" alt="image"> </div>
           <h5>购车贷款</h5>
-          <a href="#" class="btn btn-sm">咨询更多</a> </div>
+          </div>
         <div class="item text-center">
           <div class="service-icon"> <img src="../static/images/education-loan.png" alt="image"> </div>
           <h5>教育贷款</h5>
-          <a href="#" class="btn btn-sm">咨询更多</a> </div>
+          </div>
         <div class="item text-center">
           <div class="service-icon"> <img src="../static/images/personal-loan.png" alt="image"> </div>
           <h5>个人贷款</h5>
-          <a href="#" class="btn btn-sm">咨询更多</a> </div>
+          </div>
       </div>
     </div>
   </div>
@@ -203,7 +186,7 @@
 <section id="proecess" class="section-padding">
   <div class="container">
     <div class="section-header text-center">
-      <div class="section-title">简洁过程</div>
+      <div class="section-title" id="apply">简洁过程</div>
       <h2>快速且简介的申请</h2>
     </div>
     <div class="row">
@@ -372,51 +355,50 @@
 
 <!-- Footer -->
 <footer id="footer" class="secondary-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="footer-widgets">
-          <div class="footer-logo"> <img src="../static/images/logo-white.png" alt="image"> </div>
-          <p><a href="mailto:contact@weburl.com"><strong>2747546199@qq.com</strong></a></p>
-          <p><a href="tel:5551234564513"><strong>(+86) 15327285527</strong></a></p>
-        </div>
-      </div>
-      <div class="col-lg-8">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="footer-widgets">
-              <h5>服务</h5>
-              <ul>
-                <li><a href="#">购房贷款</a></li>
-                <li><a href="#">个人贷款</a></li>
-                <li><a href="#">商业贷款</a></li>
-                <li><a href="#">教育贷款</a></li>
-                <li><a href="#">购车贷款</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="footer-widgets">
-              <h5>其他</h5>
-              <ul>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">我们的团队</a></li>
-                <li><a href="#">联系我们</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
     <div class="container">
-      <p>版权所有 &copy; 2019.BigDataLending</p>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-widgets">
+            <div class="footer-logo"> <img src="../static/images/logo-white.png" alt="image"> </div>
+            <p><a href="mailto:contact@weburl.com"><strong>2747546199@qq.com</strong></a></p>
+            <p><a href="tel:5551234564513"><strong>(+86) 15327285527</strong></a></p>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer-widgets">
+                <h5>服务</h5>
+                <ul>
+                  <li><a href="{{ url_for('auth.index')}}#apply">购房贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">个人贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">商业贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">教育贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">购车贷款</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="footer-widgets">
+                <h5>其他</h5>
+                <ul>
+                  <li><a href="{{ url_for('auth.about') }}">关于我们</a></li>
+                  <li><a href="{{ url_for('auth.about') }}#team">我们的团队</a></li>
+                  <li><a href="{{ url_for('auth.contact') }}">联系我们</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
-<!-- /Footer --> 
+    <div class="footer-bottom">
+      <div class="container">
+        <p>版权所有 &copy; 2019.BigDataLending</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /Footer --> 
 
 <!-- Scripts --> 
 <script src="../static/js/jquery.min.js"></script> 

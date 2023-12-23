@@ -29,47 +29,47 @@
 <![endif]-->
 </head>
 <body>
-<!-- Header -->
-<header id="header">
-    <div class="header-top primary-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="contact-info">
-              <ul>
-                <li><a href="mailto:contact@weburl.com">2747546199@qq.com</a></li>
-                <li>+86-15327285527</li>
+    <header id="header">
+        <div class="header-top primary-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-info">
+                  <ul>
+                    <li><a href="mailto:contact@weburl.com">2747546199@qq.com</a></li>
+                    <li>+86-15327285527</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="follow-us">
+                  <a href="{{ url_for('auth.index') }}#apply" class="btn btn-xs">立即申请</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation -->
+        <nav id="navigatio-_bar" class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <div class="logo"> <a href="{{ url_for('auth.index') }}"><img src="../static/images/logo.png" alt="image"></a> </div>
+              <!-- /Logo -->
+              
+              <button id="menu-slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul class="nav navbar-nav">
+              <li><a href="{{ url_for('auth.index') }}">首页</a></li>
+              <li><a href="{{ url_for('auth.about') }}">关于我们</a></li>
+              <li><a href="{{ url_for('auth.contact') }}">联系我们</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="follow-us">
-              <a href="#" class="btn btn-xs">立即申请</a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Navigation -->
-    <nav id="navigatio-_bar" class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <div class="logo"> <a href="{{ url_for('auth.index') }}"><img src="../static/images/logo.png" alt="image"></a> </div>
-          <!-- /Logo -->
-          
-          <button id="menu-slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="nav navbar-nav">
-          <li><a href="{{ url_for('auth.index') }}">首页</a></li>
-          <li><a href="{{ url_for('auth.about') }}">关于我们</a></li>
-          <li><a href="{{ url_for('auth.contact') }}">联系我们</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Navigation end --> 
-  </header>
-  <!-- /Header --> 
+        </nav>
+        <!-- Navigation end --> 
+      </header>
+      <!-- /Header --> 
+      
 
 <!-- Intro -->
 <section class="inner-intro section-padding dark-overlay">
@@ -87,21 +87,7 @@
 </section>
 <!-- /Intro --> 
 
-<!-- About-Us -->
-<section class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 order-12">
-        <div class="image-box"> <img src="../static/images/700x510.jpg" alt="image"> </div>
-      </div>
-      <div class="col-lg-6">
-        <h2>获取个人金融服务</h2>
-        <p>我们拥有最强大的金融团队以及广大的金融客服</p>
-        <a href="#" class="btn">查看服务</a> </div>
-    </div>
-  </div>
-</section>
-<!-- /About-Us --> 
+
 
 <!-- Why-Choose -->
 <section class="section-padding gray-bg">
@@ -162,7 +148,7 @@
 <section class="section-padding gray-bg">
   <div class="container">
     <div class="section-header text-center">
-      <div class="section-title">我们的团队</div>
+      <div class="section-title" id="team">我们的团队</div>
       <h2>查看我们的团队</h2>
     </div>
     <div class="row">
@@ -170,12 +156,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-5.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Whell Smith</h5>
@@ -186,12 +166,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-6.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Eddie Adkins</h5>
@@ -202,12 +176,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-7.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Alex Zorro</h5>
@@ -218,12 +186,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-8.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Angela Doe</h5>
@@ -234,12 +196,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-9.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Karla Smith</h5>
@@ -250,12 +206,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-10.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Eddie Adkins</h5>
@@ -266,12 +216,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-2.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Alex Zorro</h5>
@@ -282,12 +226,6 @@
         <div class="team-wrap">
           <div class="member-img"> <img src="../static/images/400x400-3.jpg" alt="image">
             <div class="follow-team">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-              </ul>
             </div>
           </div>
           <h5>Angela smi</h5>
@@ -324,11 +262,11 @@
               <div class="footer-widgets">
                 <h5>服务</h5>
                 <ul>
-                  <li><a href="#">购房贷款</a></li>
-                  <li><a href="#">个人贷款</a></li>
-                  <li><a href="#">商业贷款</a></li>
-                  <li><a href="#">教育贷款</a></li>
-                  <li><a href="#">购车贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">购房贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">个人贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">商业贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">教育贷款</a></li>
+                  <li><a href="{{ url_for('auth.index')}}#apply">购车贷款</a></li>
                 </ul>
               </div>
             </div>
@@ -336,10 +274,9 @@
               <div class="footer-widgets">
                 <h5>其他</h5>
                 <ul>
-                  <li><a href="#">关于我们</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">我们的团队</a></li>
-                  <li><a href="#">联系我们</a></li>
+                  <li><a href="{{ url_for('auth.about') }}">关于我们</a></li>
+                  <li><a href="{{ url_for('auth.about') }}#team">我们的团队</a></li>
+                  <li><a href="{{ url_for('auth.contact') }}">联系我们</a></li>
                 </ul>
               </div>
             </div>
