@@ -2,7 +2,8 @@
 
 export FLASK_APP=flaskr
 export FLASK_ENV=development
-export PORT=5000
+export PORT=80
 
-source ../pj/bin/activate
-flask run --port=${PORT}
+nohup flask run --port=${PORT} --host=0.0.0.0 > output 2>&1 &
+
+
