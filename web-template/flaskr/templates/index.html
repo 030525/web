@@ -227,11 +227,11 @@
                 <input type="text" class="form-control" placeholder="银行卡号">
               </div>
               <div class="form-group">
-                <label class="form-label">贷款金额</label>
+                <label class="form-label">贷款金额:人民币</label>
                 <input id="amount" type="number" pattern="\d*" class="form-control" min="50000" max="1000000" placeholder="50000~1000000">
               </div>
               <div class="form-group">
-                <label class="form-label">月</label>
+                <label class="form-label">借款周期:月</label>
                 <input id="period"  type="number" pattern="\d*" class="form-control" min="12" max="360" placeholder="12~360">
               </div>
               <div class="form-group select">
@@ -305,13 +305,6 @@
                 m_min = 1;
                 m_max = 24;
             }
-            
-            console.log("min",min);
-            console.log("max",max);
-            console.log("mmin",m_min);
-            console.log("mmax",m_max);
-
-
             document.getElementById("amount").setAttribute("min", min);
             document.getElementById("amount").setAttribute("max", max);
             document.getElementById("amount").placeholder = String(min)+'~'+String(max);

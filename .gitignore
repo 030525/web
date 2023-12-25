@@ -1,0 +1,5 @@
+bigdata/data/**
+web-template/instance/**
+web-template/flaskr/__pycache__/**
+web-template/ssh.sh
+web-template/image/**
