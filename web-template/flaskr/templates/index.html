@@ -32,45 +32,46 @@
 <!-- Header -->
 
 <header id="header">
-  <div class="header-top primary-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="contact-info">
-            <ul>
-              <li><a href="mailto:contact@weburl.com">2747546199@qq.com</a></li>
-              <li>+86-15327285527</li>
-            </ul>
+    <div class="header-top primary-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <ul>
+                <li><a href="mailto:2747546199@qq.com">2747546199@qq.com</a></li>
+                <li><a href="tel:15327285527">+86-15327285527</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="follow-us">
+              <a href="{{ url_for('auth.index') }}#apply" class="btn btn-xs">立即申请</a> </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="follow-us">
-            <a href="{{ url_for('auth.index') }}#apply" class="btn btn-xs">立即申请</a> </div>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav id="navigatio-_bar" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="logo"> <a href="{{ url_for('auth.index') }}"><img src="../static/images/logo.png" alt="image">BigDataLending</a> </div>
+          <!-- /Logo -->
+          
+          <button id="menu-slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="nav navbar-nav">
+          <li><a href="{{ url_for('auth.index') }}">首页</a></li>
+          <li><a href="{{ url_for('auth.about') }}">关于我们</a></li>
+          <li><a href="{{ url_for('auth.contact') }}">联系我们</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Navigation -->
-  <nav id="navigatio-_bar" class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <div class="logo"> <a href="{{ url_for('auth.index') }}"><img src="../static/images/logo.png" alt="image">BigDataLending</a> </div>
-        <!-- /Logo -->
-        
-        <button id="menu-slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="nav navbar-nav">
-		<li><a href="{{ url_for('auth.index') }}">首页</a></li>
-        <li><a href="{{ url_for('auth.about') }}">关于我们</a></li>
-        <li><a href="{{ url_for('auth.contact') }}">联系我们</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navigation end --> 
-</header>
-<!-- /Header --> 
+    </nav>
+    <!-- Navigation end --> 
+  </header>
+  <!-- /Header --> 
+  
 
 <!-- Intro -->
 <section id="intro">
@@ -423,8 +424,8 @@
         <div class="col-lg-4">
           <div class="footer-widgets">
             <div class="footer-logo"> <img src="../static/images/logo-white.png" alt="image"> </div>
-            <p><a href="mailto:contact@weburl.com"><strong>2747546199@qq.com</strong></a></p>
-            <p><a href="tel:5551234564513"><strong>(+86) 15327285527</strong></a></p>
+            <p><a href="mailto:2747546199@qq.com"><strong>2747546199@qq.com</strong></a></p>
+            <p><a href="tel:15327285527"><strong>(+86) 15327285527</strong></a></p>
           </div>
         </div>
         <div class="col-lg-8">
@@ -457,11 +458,12 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p>版权所有 &copy; 2019.BigDataLending</p>
+        <p>版权所有 &copy; 2023.BigDataLending</p>
       </div>
     </div>
   </footer>
   <!-- /Footer --> 
+
 
 <!-- Scripts --> 
 <script src="../static/js/jquery.min.js"></script> 
