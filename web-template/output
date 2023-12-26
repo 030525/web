@@ -143,3 +143,5 @@ Press CTRL+C to quit
 123.249.90.23 - - [26/Dec/2023 22:52:45] "HEAD /static/images/favicon-icon/favicon.png HTTP/1.1" 200 -
 123.249.90.23 - - [26/Dec/2023 22:52:46] "GET /static/images/favicon-icon/favicon.png HTTP/1.1" 200 -
 181.193.81.190 - - [26/Dec/2023 22:52:50] "GET / HTTP/1.1" 302 -
+123.249.99.231 - - [26/Dec/2023 23:08:52] "HEAD /robots.txt HTTP/1.1" 404 -
+123.249.99.231 - - [26/Dec/2023 23:08:52] "GET /robots.txt HTTP/1.1" 404 -
