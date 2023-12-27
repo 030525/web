@@ -214,7 +214,7 @@
             <h5>快速借贷</h5>
           </div>
           <div class="box-body">
-            <form>
+            <form method="post">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="真实姓名">
               </div>
@@ -243,13 +243,13 @@
               </div>
               <br>
               
-              <fieldset>
+              <fieldset id="email_fieldset">
                 <legend>邮箱验证</legend>
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="个人邮箱">
+                  <input type="text" class="form-control" placeholder="个人邮箱" name="email">
                 </div>
                 <div class="form-group">
-                  <input type="button" value="立即验证">
+                  <input type="submit" value="立即验证" name="email_verify">
                 </div>
               </fieldset>
 
@@ -258,7 +258,7 @@
                 </div>
 
               <div class="form-group">
-                <input type="submit" value="申请" class="btn">
+                <input type="submit" value="申请" class="btn" name="submit_loan">
               </div>
             </form>
           </div>

@@ -2,18 +2,12 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-import random
-import string
+
 
 sender_email = "2747546199@qq.com"
 app_password = "rspsauskdnkldgbi"
 
-def generate_verification_code():
-    # 生成数字和字母的字符集
-    characters = string.digits + string.ascii_letters
-    # 生成六位验证码
-    verification_code = ''.join(random.choice(characters) for _ in range(6))
-    return verification_code
+
 
 def send_message(receiver_email,Subject,body):
     msg = MIMEMultipart()
@@ -27,9 +21,11 @@ def send_message(receiver_email,Subject,body):
         server.login(sender_email, app_password)
         server.sendmail(sender_email, receiver_email, msg.as_string())
 
+def send_verify_code(email,code):
+    Subject = "来自科技金融第九组项目:BigDataLending 的验证码"
+    body = f"您的验证码是: {code} , 本验证码约60秒的时效 , 请尽快使用 , 祝您生活愉快!"  
 
-
-
+    send_message(email,Subject,body)
 
 
 
